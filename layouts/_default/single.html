@@ -25,6 +25,10 @@
       </div>
       {{ end }}
 
+      {{ if .Site.Params.DuoshuoShortname }}
+          {{ partial "duoshuo.html" . }}
+      {{ end }}
+
     </div>
 
     {{ partial "footer.html" . }}
