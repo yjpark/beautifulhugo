@@ -6,6 +6,7 @@
   <body>
 
     {{ partial "nav.html" . }}
+    <canvas id="paper-background" resize></canvas>
 
     <div role="main" class="container main-content">
 
@@ -15,18 +16,6 @@
         {{ partial "page.html" . }}
       {{ else }}
         NO MATCHING PARTIAL
-      {{ end }}
-
-      {{ if .Site.DisqusShortname }}
-      <div class="row disqus-comments">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          {{ template "_internal/disqus.html" . }}
-        </div>
-      </div>
-      {{ end }}
-
-      {{ if .Site.Params.DuoshuoShortname }}
-          {{ partial "duoshuo.html" . }}
       {{ end }}
 
     </div>

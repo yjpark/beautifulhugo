@@ -44,3 +44,8 @@
   </div>
 </div>
 {{ end }}
+
+{{ if .Site.Params.DuoshuoShortname }}
+    {{ partial "duoshuo.html" . }}
+{{ end }}
+
