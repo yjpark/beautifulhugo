@@ -71,14 +71,14 @@
         				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
       			  </span>
       			</a>
-    		  </li>		
+    		  </li>
 
         </ul>
         <p class="copyright text-muted">
     		  {{ .Site.Author.name }}
     		  &nbsp;&bull;&nbsp;
     		  {{ .Site.LastChange.Format "2006" }}
-    		  
+
     		  {{ if .Site.Title }}
     		  &nbsp;&bull;&nbsp;
     		  <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
@@ -97,5 +97,9 @@
 <script src="{{ .Site.BaseURL }}js/jquery-1.11.2.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/bootstrap.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/main.js"></script>
+
+<script src="{{ .Site.BaseURL }}js/paper-full.js"></script>
+<script type="text/paperscript" src="js/paper-sea.js" canvas="paper-background">
+</script>
 
 {{ template "_internal/google_analytics.html" . }}

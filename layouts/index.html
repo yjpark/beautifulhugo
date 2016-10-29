@@ -6,6 +6,7 @@
   <body>
 
     {{ partial "nav.html" . }}
+    <canvas id="paper-background" resize></canvas>
 
     <div role="main" class="container main-content">
 
@@ -15,23 +16,23 @@
         <article class="post-preview">
           <a href="{{ .Permalink }}">
       	  <h2 class="post-title">{{ .Title }}</h2>
-      	
+
       	  {{ if .Description }}
       	  <h3 class="post-subtitle">
       	    {{ .Description }}
       	  </h3>
-      	  {{ end }}  
+      	  {{ end }}
           </a>
 
           <p class="post-meta">
             Posted on {{ .Date.Format "January 2, 2006" }}
           </p>
-        
+
           <div class="post-entry">
             {{ .Summary }}
       	  <a href="{{ .Permalink }}" class="post-read-more">[Read&nbsp;More]</a>
           </div>
-        
+
          </article>
         {{ end }}
       </div>
