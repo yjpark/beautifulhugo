@@ -86,12 +86,14 @@ function onPivotMove(pivot) {
 
 var pivot = new Point(view.size.width, view.size.height) * 0.5;
 var direction = Point.random() - 0.5;
-var speed = Point.random().x * 50;
+var speed = Point.random().x * 60;
 
-var skip = false;
+var count = 0;
 function onFrame(event) {
-    skip = !skip;
-    if (skip) return;
+    count = (count + 1) % 3;
+    if (count > 1) {
+        return;
+    }
     updatePivot();
     //pivot = new Point(view.size.width, view.size.height) * Point.random();
     if (Math.random() > 0.9) {
