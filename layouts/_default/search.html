@@ -7,8 +7,6 @@
 
     {{ partial "nav.html" . }}
 
-    <canvas id="paper-background" resize></canvas>
-
     <!-- https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -31,6 +29,9 @@
           ${ isset tags }<p>Tags: ${tags}</p>${ end }
           ${ isset categories }<p>Categories: ${categories}</p>${ end }
         </div>
+    </script>
+    <script>
+      document.getElementById('search-query').focus();
     </script>
 
     {{ partial "footer.html" . }}
