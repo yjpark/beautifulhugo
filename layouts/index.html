@@ -6,8 +6,6 @@
   <body>
 
     {{ partial "nav.html" . }}
-    <canvas id="paper-background" resize></canvas>
-
     <div role="main" class="container main-content">
 
       <div class="posts-list">
@@ -55,6 +53,8 @@
     </div>
 
     {{ partial "footer.html" . }}
+
+    {{ partial "paper-sea.html" . }}
 
   </body>
 </html>
